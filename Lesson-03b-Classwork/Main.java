@@ -8,8 +8,6 @@ class Main {
 
   void init(){
     System.out.println("Haoxuan Zheng \n 11355 Queens NY");
-    
-  }
-
-  
+ 
+  }  
 }
