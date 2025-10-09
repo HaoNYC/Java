@@ -48,7 +48,7 @@ class Main {
 	}
 	void init(){
 		System.out.println(gpa(95));
-		if (isGraduating("Senior",44) == true) {
+		if (isGraduating("Senior",44)) {
             System.out.println("Student is Graduating");
         } else {
             System.out.println("Student is NOT Graduating");
