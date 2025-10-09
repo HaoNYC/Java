@@ -41,9 +41,10 @@ class Main {
             return 10.00 + (0.02 * (weightPounds - 25));
     }
 	boolean blueOrViolet(double frequencyTHz) {
-        boolean isBlue = (frequencyTHz >= 600 && frequencyTHz <= 670);
-        boolean isViolet = (frequencyTHz >= 700 && frequencyTHz <= 750);
-        return isBlue || isViolet;
+        if ((frequencyTHz >= 600 && frequencyTHz <= 670)||(frequencyTHz >= 700 && frequencyTHz <= 750))
+			return true;
+		else
+			return false;
 	}
 	void init(){
 		System.out.println(gpa(95));
