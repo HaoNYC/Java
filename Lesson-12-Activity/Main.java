@@ -35,10 +35,33 @@ class Main {
       return "Queens";
     }
   }
+  String getMonth(String date){
+    if (date.substring(0,2).equals("07")){
+      return "July";
+    }else if(date.substring(0,2).equals("08")) {
+      return "August";
+    }else if(date.substring(0,2).equals("09")){
+      return "September";
+    }else{
+      return "Unfind";
+    }
+  }  
+
+  boolean validatePswd(String password){
+    if (password.length() < 5 || password.length() > 8) {
+      return false;
+    }else{
+      return true;
+    }
+  }
+    
+  
   void init(){
     print(creditCardType("114544"));
     print(pigLatin("pig"));
     print(nycLocate("11355"));
+    print(getMonth("07/11/2025"));
+    print(validatePswd("12bhs23453"));
   }
 
   
