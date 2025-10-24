@@ -48,10 +48,10 @@ class Main {
   }  
 
   boolean validatePswd(String password){
-    if (password.length() < 5 || password.length() > 8) {
-      return false;
-    }else{
+    if (password.length() >= 5 && password.length() <= 8 && password.indexOf("^") == -1 && password.indexOf("*") == -1 && password.indexOf("("")") == -1){
       return true;
+    }else{
+      return false;
     }
   }
     
