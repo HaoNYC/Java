@@ -19,7 +19,6 @@ class Main {
     }
     return " ".repeat(N);
   }
-  
   double harmonic(int N) {
     double sum = 0.0;
     for (int i = 1; i <= N; i++) {
@@ -27,7 +26,6 @@ class Main {
     }
     return sum;
   }
-  // C3
   int fib(int N) {
     int t1 = 0;
     int t2 = 1;
