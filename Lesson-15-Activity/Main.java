@@ -14,10 +14,11 @@ class Main {
   }
 
   String spaces(int N) {
-    if (N < 0) {
-        return "";
-    }
-    return " ".repeat(N);
+    String space = "";
+      for (int i = 0; i < N; i++) {
+          space = space + " ";
+      }
+      return space;
   }
   double harmonic(int N) {
     double sum = 0.0;
