@@ -8,8 +8,10 @@ class Main {
   void printt(Object o){System.out.print(o);}
 
   void init(){
-    allowance();
-    GCF(5, 10);
+    print(allowance());
+    addTwoNumbers();
+    print(GCF(12, 18));
+    menu();
   }
 
   
@@ -18,15 +20,27 @@ class Main {
     return (int)(Math.random()*range+lower);
   }
 
-  int allowance(){
-    double target = 5.00;
-    double penny = 0.01;
+  String allowance(){
+    double money = 0.01; 
     int days = 1;
-    while(penny < target){
-      penny *= 2;
+    while(money < 5.0){
+      money *= 2;
       days++;
     }
-    return days;
+    return "Days:" + days;
+  }
+
+  void addTwoNumbers(){
+    int num1 = (int)(Math.random() * 10) + 1;
+    int num2 = (int)(Math.random() * 10) + 1;
+    int sum = num1 + num2;
+    print("What is " + num1 + " + " + num2 + " ?");
+    int guess = Input.readInt();
+    while(guess != sum){
+      print("Incorrect, try again!");
+      guess = Input.readInt();
+    }
+    print("Correct!");
   }
 
   int GCF(int a, int b){
@@ -36,6 +50,33 @@ class Main {
       a = temp;
     }
     return a;
+  }
+
+  void menu(){
+    int choice = 0;
+    while(choice != 4){
+      print("Welcome Looney Tune's System");
+      print("Select from the following choices:");
+      print("1 - Allowance");
+      print("2 - Addition game");
+      print("3 - Calculate the GCF of two integers");
+      print("4 - Exit Looney Tune System");
+      choice = Input.readInt();
+
+      if(choice == 1){
+        print(allowance());
+      }else if(choice == 2){
+        addTwoNumbers();
+      }else if(choice == 3){
+        print("Enter first integer:");
+        int a = Input.readInt();
+        print("Enter second integer:");
+        int b = Input.readInt();
+        print("GCF is " + GCF(a,b));
+      }else{
+        print("Goodbye!");
+      }
+    }
   }
 
 }
