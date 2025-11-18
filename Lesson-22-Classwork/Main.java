@@ -7,18 +7,20 @@ class Main {
 
   void init(){
     String[] friends = {"Alex", "Kerry", "Harry"};
-    double[] celsiusTemps = {0, 20, 37, 100};
-    double[] fahrenheitTemps = convert(celsiusTemps);
-    print(fahrenheitTemps);
+    double[] tempC = {-4.5, 0, 20, 37, 100};
+    double[] tempF = convert(tempC);
+    for(int i=0;i<tempF.length;i++){
+      print(tempF[i]);
+    }
   }
 
   double celsiusToFarhenheit(double c){
         return c*9/5+32;
   }
-  double[] convert(double[] celsiusTemps){
-    double[] t = new double[celsiusTemps.length];
-    for(int x=0; x < celsiusTemps.length; x++){ 
-      t[x] = celsiusToFarhenheit(celsiusTemps[x]);
+  double[] convert(double[] c){
+    double[] t = new double[c.length];
+    for(int i=0; i < c.length; i++){ 
+      t[i] = celsiusToFarhenheit(c[i]);
     }
     return t;
   }
