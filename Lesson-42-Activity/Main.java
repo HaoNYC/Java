@@ -39,7 +39,7 @@ class Main {
 
       String check5 = db.runSQL("SELECT * FROM cr101 WHERE StudentID='STUDENT999';","table-auto");
       print(check5);
-      String update5 = db.runSQL("UPDATE cr101 SET Grade=11, OffClass='junior' WHERE StudentID='STUDENT999';","table-auto");
+      String update5 = db.runSQL("UPDATE cr101 SET Grade=11, OffcClass='junior' WHERE StudentID='STUDENT999';","table-auto");
       print(update5);
 
       String check6 = db.runSQL("SELECT * FROM cr101 WHERE StudentID='STUDENT1231';","table-auto");
